@@ -1,0 +1,494 @@
+@import url('https://fonts.googleapis.com/css2?family=Allison&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500&display=swap');
+
+:root{
+    /* Relação de fontes */
+    --título:'Allison', cursive;
+    --subtítulo:'Cormorant Garamond', serif;
+    --corpo:'Tajawal', sans-serif;
+
+    /* Relação de cores */
+    --cor1: #8F7D5E;
+    --cor2: #EFE9E6;
+    --cor3: #C2B092;
+    --cor4: #6A8EAE;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url(phone-wallpaper.png);
+    background-size: 130%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    height: 90vh;
+}
+
+.fundo{
+    max-width: 90%;
+    margin: auto;
+    background-color: var(--cor2);
+    font-family: var(--corpo);
+}
+
+header{
+    text-align: center;
+    font-family: var(--subtítulo);
+    color: var(--cor1);
+    font-size: 0.8rem;
+}
+
+header> img{
+    width: 55%;
+}
+
+.slogan{
+    font-family: var(--subtítulo);
+    margin-top: -5px;
+}
+
+hr{
+    max-width: 90%;
+    margin: auto;
+    background-color: var(--cor1);
+    border-color: var(--cor1);
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.menu{
+    width: 95%;
+    margin: auto;
+    display: flex;
+    text-align: center;
+}
+
+.início{
+    width: 9%;
+}
+
+.doces{
+    width: 9%;
+}
+
+.bolos{
+    width: 9%;
+}
+
+.páscoa{
+    width: 25%;
+}
+
+.natal{
+    width: 25%;
+}
+
+.comemorativas{
+    width: 17%;
+}
+
+.festas{
+    width: 15%;
+}
+
+.selecionado{
+    color: var(--cor4);
+    -webkit-text-stroke-width: 0.3px;
+    -webkit-text-stroke-color: var(--cor4);
+    cursor: default;
+}
+
+.menu > a{
+    text-decoration: none;
+    color: var(--cor1);
+    font-family: var(--título);
+    font-size: 0.85rem;
+    flex-direction: row;
+}
+
+.menu > a:hover:not(#menu-aberto){
+    background-color: #c2b0924f;
+    border-radius: 5px 5px 0px 0px;
+    transition: 0.3s;
+}
+
+.exibição-produtos{
+    width: 97%;
+    text-align: justify;
+    margin: auto;
+    font-size: 0.8rem;
+    padding: 10px 0px;
+}
+
+.produtos{
+    width: 97%;
+    margin: auto;
+    font-size: 0.8rem;
+}
+
+.item{
+    margin: 20px 0px;
+}
+
+.nome-item{
+    width: 83%;
+    font-family: var(--subtítulo);
+    font-weight: bold;
+    color: var(--cor4);
+    display: inline-block;
+}
+
+.mais{
+    width: 15%;
+    text-align: right;
+    display: inline-block;
+}
+
+.mais > a{
+    text-decoration: none;
+    color: var(--cor4);
+    font-size: 0.65rem;
+}
+
+.mais > a:hover{
+    color: var(--cor4);
+    font-size: 0.7rem;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.mais > a:visited{
+    color: var(--cor4);
+    text-decoration: none;
+}
+
+.descrição{
+    color: var(--cor3);
+    font-size: 0.7rem;
+    line-height: 0.7rem;
+}
+
+.detalhamento{
+    font-size: 0.65rem;
+    margin: 0px 0px 0px 10px;
+}
+
+.opções{
+    display: inline-block;
+    margin: 5px 20px 5px 0px;
+}
+
+.opções-continuação{
+    display: inline-block;
+    margin: 5px 0px 5px -10px;
+}
+
+.sabores{
+    color: var(--cor1);
+}
+
+.sabores-vazio{
+    color: transparent;
+}
+
+.título-div{
+    color: var(--cor4);
+}
+
+.valores{
+    display: flex;
+    flex-direction: row;
+    color: var(--cor4);
+}
+
+.preço{
+    color: var(--cor4);
+}
+
+.informação{
+    width: 30%;
+}
+
+.extra{
+    color: var(--cor4);
+}
+
+.produtos > .extra{
+    color: var(--cor4);
+    text-align: center;
+    font-size: 0.7rem;
+}
+
+#info-doce-gourmet, #info-doce-tradicional, #info-cento-gourmet, #info-cento-tradicional, #info-bento-cake, #info-caseirinho, #info-bolo-tradicional, #info-ovo-colher, #info-ovo-trufado, #info-kit-degustação, #info-bombom-morango, #info-panetone, #info-tortas, #info-sobremesas, #info-bolo-vulcão, #info-dia-mães, #info-dia-namorados, #info-kit-festa{
+    display: none;
+}
+
+#info-doce-gourmet:target, #info-doce-tradicional:target, #info-cento-gourmet:target, #info-cento-tradicional:target, #info-bento-cake:target, #info-caseirinho:target, #info-bolo-tradicional:target, #info-ovo-colher:target, #info-ovo-trufado:target, #info-kit-degustação:target, #info-bombom-morango:target, #info-panetone:target, #info-tortas:target, #info-sobremesas:target, #info-bolo-vulcão:target, #info-dia-mães:target, #info-dia-namorados:target, #info-kit-festa:target{
+    display: block;
+}
+
+footer{
+    width: 97%;
+    margin: auto;
+    font-family: var(--corpo);
+    color: var(--cor1);
+    font-size: 0.65rem;
+    padding-bottom: 2px;
+}
+
+ul{
+    list-style: none;
+}
+
+.avisos{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+}
+
+.marca{
+    max-width: 15%;
+}
+
+.info{
+    width: auto;
+    margin-left: 10px;
+}
+
+.contatos{
+    padding-top: 5px;
+}
+
+.contatos > ul{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-between;
+    font-size: 0.6rem;
+}
+
+.contato-ig, .contato-wpp, .contato-email{
+    width: calc(100%/3);
+}
+
+@media only screen and (min-width: 649px){
+    body{
+        background-image: url(wallpaper.jpg);
+        background-size: 200%;
+        background-position-x: center;
+        background-position-y: center;
+    }
+
+    .fundo{
+        max-width: 80%;
+    }
+
+    header{
+        font-size: 1rem;
+    }
+
+    .menu > a{
+        font-size: 1.45rem;
+    }
+
+    .exibição-produtos, .produtos{
+        font-size: 1rem;
+    }
+
+    .nome-item{
+        width: 75%;
+    }
+
+    .mais{
+        width: 20%;
+    }
+    
+    .mais > a{
+        font-size: 0.8rem;
+    }
+
+    .mais > a:hover{
+        font-size: 0.9rem;
+    }
+
+    .descrição, .título-div{
+        font-size: 0.85rem;
+    }
+
+    .detalhamento{
+        font-size: 0.75rem;
+    }
+
+    .opções{
+        margin: 7px 35px 7px 0px;
+    }
+
+    .informação{
+        width: 22.5%;
+    }
+
+    .produtos > .extra{
+        font-size: 0.9rem;
+    }
+
+    footer{
+        display: flex;
+        height: 5%;
+        padding-bottom: 5px;
+    }
+
+    .avisos{
+        width: 65%;
+    }
+
+    .marca{
+        max-width: 80px;
+        height: 80px;
+    }
+    
+    .contatos{
+        display: flex;
+    }
+
+    .contatos > ul{
+        flex-direction: column;
+        font-size: 0.65rem;
+    }
+
+    .contato-ig, .contato-wpp, .contato-email{
+        width: auto;
+        display: flex;
+    }
+
+    i{
+        display: inline-block;
+        margin-right: 5px;
+    }
+}
+
+@media only screen and (min-width: 1220px){
+    body{
+        background-image: url(wallpaper.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100%;
+    }
+
+    .fundo{
+        max-width: 70%;
+    }
+
+    header> img{
+        width: 45%;
+    }
+
+    .slogan{
+        margin-top: -1%;
+        font-size: 1.1rem;
+    }
+
+    hr{
+        height: 1px;
+        background-color: var(--cor1);
+        border-color: var(--cor1);
+    }
+
+    .menu > a{
+        text-decoration: none;
+        text-align: center;
+        font-family: var(--título);
+        font-size: 2rem;
+        color: var(--cor1);
+    }
+
+    .início{
+        width:10%;
+    }
+    
+    .doces{
+        width:10%;
+    }
+    
+    .bolos{
+        width:10%;
+    }
+    
+    .páscoa{
+        width: 21%;
+    }
+    
+    .natal{
+        width: 21%;
+    }
+    
+    .comemorativas{
+        width: 14%;
+    }
+    
+    .festas{
+        width: 14%;
+    }
+
+    .item{
+        margin-top: 25px;
+        padding-bottom: 2vh;
+    }
+
+    .mais>a{
+        font-size: 1em;
+    }
+
+    .nome-item{
+        font-size: 1.3rem;
+    }
+
+    .descrição{
+        font-size: 1rem;
+    }
+
+    .opções, .valores > p, .título-div{
+        font-size: 0.9rem;
+    }
+
+    footer{
+        font-size: 0.9rem;
+    }
+
+    .avisos{
+        width: 45%;
+    }
+
+    .contatos{
+        width: 55%;
+    }
+
+    .contatos > ul{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .contato-ig{
+        flex-direction: column;
+    }
+
+    .contato-wpp{
+        flex-direction: column;
+    }
+
+    .contato-email{
+        flex-direction: column;
+    }
+
+    small, i{
+        font-size: 0.85rem;
+    }
+}
